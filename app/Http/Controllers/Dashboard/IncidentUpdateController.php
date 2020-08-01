@@ -16,6 +16,7 @@ use CachetHQ\Cachet\Bus\Commands\IncidentUpdate\CreateIncidentUpdateCommand;
 use CachetHQ\Cachet\Bus\Commands\IncidentUpdate\UpdateIncidentUpdateCommand;
 use CachetHQ\Cachet\Integrations\Contracts\System;
 use CachetHQ\Cachet\Models\Incident;
+use CachetHQ\Cachet\Models\IncidentTemplate;
 use CachetHQ\Cachet\Models\IncidentUpdate;
 use GrahamCampbell\Binput\Facades\Binput;
 use Illuminate\Contracts\Auth\Guard;
@@ -88,6 +89,7 @@ class IncidentUpdateController extends Controller
     {
         return View::make('dashboard.incidents.updates.add')
             ->withIncident($incident)
+            ->withIncidentTemplates(IncidentTemplate::all())
             ->withNotificationsEnabled($this->system->canNotifySubscribers());
     }
 
@@ -101,7 +103,7 @@ class IncidentUpdateController extends Controller
     public function createIncidentUpdateAction(Incident $incident)
     {
         try {
-            $incidentUpdate = dispatch(new CreateIncidentUpdateCommand(
+            $incidentUpdate = execute(new CreateIncidentUpdateCommand(
                 $incident,
                 Binput::get('status'),
                 Binput::get('message'),
@@ -151,7 +153,7 @@ class IncidentUpdateController extends Controller
     public function editIncidentUpdateAction(Incident $incident, IncidentUpdate $incidentUpdate)
     {
         try {
-            $incidentUpdate = dispatch(new UpdateIncidentUpdateCommand(
+            $incidentUpdate = execute(new UpdateIncidentUpdateCommand(
                 $incidentUpdate,
                 Binput::get('status'),
                 Binput::get('message'),

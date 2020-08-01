@@ -24,7 +24,7 @@ return [
         'cache_driver'     => 'Ovladač cache',
         'queue_driver'     => 'Řadič fronty',
         'session_driver'   => 'Ovladač sezení',
-        'mail_driver'      => 'Driver pro Mail',
+        'mail_driver'      => 'Ovladač pro e-mail',
         'mail_host'        => 'Host pro Mail',
         'mail_address'     => 'Adresa Mailu',
         'mail_username'    => 'Uživatelské jméno pro Mail účet',
@@ -64,7 +64,7 @@ return [
         'templates'          => [
             'name'     => 'Jméno',
             'template' => 'Šablona',
-            'twig'     => 'Šablony pro incidenty mohou používat šablonovací jazyk <a href="http://twig.sensiolabs.org/" target="_blank">Twing</a>.',
+            'twig'     => 'Šablony pro incidenty mohou používat šablonovací jazyk <a href="http://twig.sensiolabs.org/" target="_blank">Twig</a>.',
         ],
     ],
 
@@ -78,7 +78,7 @@ return [
         'templates'    => [
             'name'     => 'Jméno',
             'template' => 'Šablona',
-            'twig'     => 'Šablony pro incidenty mohou používat šablonovací jazyk <a href="http://twig.sensiolabs.org/" target="_blank">Twing</a>.',
+            'twig'     => 'Šablony pro incidenty mohou používat šablonovací jazyk <a href="http://twig.sensiolabs.org/" target="_blank">Twig</a>.',
         ],
     ],
 
@@ -154,7 +154,7 @@ return [
             'about-this-page'                       => 'O této stránce',
             'days-of-incidents'                     => 'Kolik dní incidentů zobrazovat?',
             'time_before_refresh'                   => 'Obnovovací frekvence status stránky (v sekundách)',
-            'major_outage_rate'                     => 'Major outage threshold (in %)',
+            'major_outage_rate'                     => 'Hlavní doba výpadků (v %)',
             'banner'                                => 'Obrázek banneru',
             'banner-help'                           => 'Doručuje se nenahrávat soubory větší než 930 pixelů na šířku',
             'subscribers'                           => 'Umožnit lidem, aby se přihlašovali k odběru e-mailových upozornění?',
@@ -168,7 +168,7 @@ return [
         'analytics' => [
             'analytics_google'       => 'Kód pro Google Analytics',
             'analytics_gosquared'    => 'Kód pro GoSquared Analytics',
-            'analytics_piwik_url'    => 'URL tvojí instance Piwik (bez http(s)://)',
+            'analytics_piwik_url'    => 'URL vaší instance Piwik',
             'analytics_piwik_siteid' => 'Id webu Piwik',
         ],
         'localization' => [
@@ -180,8 +180,8 @@ return [
         'security' => [
             'allowed-domains'           => 'Povolené domény',
             'allowed-domains-help'      => 'Oddělené čárkami. Výše uvedené domény jsou ve výchozím nastavení automaticky povoleny.',
-            'always-authenticate'       => 'Always authenticate',
-            'always-authenticate-help'  => 'Require login to view any Cachet page',
+            'always-authenticate'       => 'Vždy ověřovat',
+            'always-authenticate-help'  => 'Požadovat přihlášení k zobrazení jakékoli Cachet stránky',
         ],
         'stylesheet' => [
             'custom-css' => 'Vlastní šablona stylů',
@@ -227,6 +227,11 @@ return [
 
     'general' => [
         'timezone' => 'Vybrat časové pásmo',
+    ],
+
+    'seo' => [
+        'title'        => 'SEO titulek',
+        'description'  => 'Popis SEO',
     ],
 
     // Buttons

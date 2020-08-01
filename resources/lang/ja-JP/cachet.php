@@ -23,16 +23,18 @@ return [
         'group' => [
             'other' => 'その他のコンポーネント',
         ],
+        'select_all'   => '全て選択',
+        'deselect_all' => '全て選択解除',
     ],
 
     // Incidents
     'incidents' => [
         'none'         => 'インシデントはありません',
         'past'         => 'インシデント履歴',
-        'stickied'     => 'ピン留めインシデント',
+        'stickied'     => '固定している障害情報',
         'scheduled'    => '計画メンテナンス',
         'scheduled_at' => ', 予定日時 :timestamp',
-        'posted'       => '掲載日時 :timestamp',
+        'posted'       => 'Posted :timestamp by :username',
         'posted_at'    => '掲載日時 :timestamp',
         'status'       => [
             1 => '調査中',
@@ -75,32 +77,37 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'           => '最新のアップデート情報を購読する',
+        'subscribe'           => 'Subscribe to status changes and incident updates',
         'unsubscribe'         => '購読の解除',
         'button'              => '購読',
         'manage_subscription' => '購読の管理',
         'manage'              => [
-            'no_subscriptions' => '現在、すべてのアップデートを購読しています。',
-            'my_subscriptions' => '現在、以下のアップデートを購読しています。',
-            'manage_at_link'   => '購読の管理',
+            'notifications'       => 'Notifications',
+            'notifications_for'   => '通知の管理',
+            'no_subscriptions'    => '現在、すべてのアップデートを購読しています。',
+            'update_subscription' => '購読の管理',
+            'my_subscriptions'    => '現在、以下のアップデートを購読しています。',
+            'manage_at_link'      => '購読の管理',
         ],
         'email' => [
-            'subscribe'          => 'メールによるアップデート情報の購読',
-            'subscribed'         => 'You\'ve been subscribed to email notifications, please check your email to confirm your subscription.',
-            'verified'           => 'あなたのメール購読を確認しました。ありがとうございます！',
-            'manage'             => '購読の管理',
-            'unsubscribe'        => 'Unsubscribe from email updates.',
-            'unsubscribed'       => 'メールの購読が取り消されました。',
-            'failure'            => '購読に失敗しました。',
-            'already-subscribed' => '既に購読しているので :email の購読ができません。',
+            'manage_subscription' => 'We\'ve sent you an email, please click the link to manage your subscription',
+            'subscribe'           => 'メールによるアップデート情報の購読',
+            'subscribed'          => 'You\'ve been subscribed to email notifications, please check your email to confirm your subscription.',
+            'updated-subscribe'   => 'You\'ve succesfully updated your subscriptions.',
+            'verified'            => 'あなたのメール購読を確認しました。ありがとうございます！',
+            'manage'              => '購読の管理',
+            'unsubscribe'         => 'Unsubscribe from email updates.',
+            'unsubscribed'        => 'メールの購読が取り消されました。',
+            'failure'             => '購読に失敗しました。',
+            'already-subscribed'  => '既に購読しているので :email の購読ができません。',
         ],
     ],
 
     'signup' => [
         'title'    => '新規登録',
-        'username' => 'ユーザー名',
+        'username' => 'Username',
         'email'    => 'Email',
-        'password' => 'パスワード',
+        'password' => 'Password',
         'success'  => 'アカウントが作成されました。',
         'failure'  => '新規登録に失敗しました。',
     ],
@@ -122,9 +129,9 @@ return [
     // Meta descriptions
     'meta' => [
         'description' => [
-            'incident'  => 'Details and updates about the :name incident that occurred on :date',
-            'schedule'  => 'Details about the scheduled maintenance period :name starting :startDate',
-            'subscribe' => 'Subscribe to :app in order to receive updates of incidents and scheduled maintenance periods',
+            'incident'  => ':date に発生した:nameの障害情報',
+            'schedule'  => ':startDate に予定している:name のメンテナンスの詳細',
+            'subscribe' => ':app の障害情報とメンテナンス情報を購読する',
             'overview'  => 'Stay up to date with the latest service updates from :app.',
         ],
     ],

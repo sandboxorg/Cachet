@@ -23,6 +23,8 @@ return [
         'group' => [
             'other' => 'Andere Komponenten',
         ],
+        'select_all'   => 'Alles auswählen',
+        'deselect_all' => 'Alles abwählen',
     ],
 
     // Incidents
@@ -32,7 +34,7 @@ return [
         'stickied'     => 'Angepinnte Vorfälle',
         'scheduled'    => 'Wartungsarbeiten',
         'scheduled_at' => ', geplant :timestamp',
-        'posted'       => 'Veröffentlicht :timestamp',
+        'posted'       => 'Posted :timestamp by :username',
         'posted_at'    => 'Veröffentlicht am :timestamp',
         'status'       => [
             1 => 'Untersuchungen laufen',
@@ -75,24 +77,29 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'           => 'Abonnieren Sie um die neuesten Updates zu erhalten.',
+        'subscribe'           => 'Abonniere Status- und Vorfalländerungen',
         'unsubscribe'         => 'Abmelden',
         'button'              => 'Abonnieren',
-        'manage_subscription' => 'Abos verwalten',
+        'manage_subscription' => 'Abonnements verwalten',
         'manage'              => [
-            'no_subscriptions' => 'Du hast im Augenblick alle Updates abonniert.',
-            'my_subscriptions' => 'Du hast im Augenblick folgende Updates abonniert.',
-            'manage_at_link'   => 'Verwalte deine Abos unter :link',
+            'notifications'       => 'Benachrichtigungen',
+            'notifications_for'   => 'Verwalten von Benachrichtigungen für',
+            'no_subscriptions'    => 'Du hast im Augenblick alle Updates abonniert.',
+            'update_subscription' => 'Update-Abonnement',
+            'my_subscriptions'    => 'Du hast im Augenblick folgende Updates abonniert.',
+            'manage_at_link'      => 'Verwalte deine Abonnements unter :link',
         ],
         'email' => [
-            'subscribe'          => 'Aktualisierungen per E-Mail abonnieren.',
-            'subscribed'         => 'Sie haben E-Mail-Benachrichtigungen abonniert, überprüfen Sie bitte Ihre E-Mail, um Ihr Abonnement zu bestätigen.',
-            'verified'           => 'Ihre E-Mail-Abonnement ist bestätigt worden. Danke!',
-            'manage'             => 'Verwalte deine Abonnements',
-            'unsubscribe'        => 'Abonnement widerrufen.',
-            'unsubscribed'       => 'Ihre E-Mail-Abonnement wurde beendet.',
-            'failure'            => 'Beim aktivieren des Abonnements ist ein Fehler aufgetreten.',
-            'already-subscribed' => 'Abonnement für :email konnte nicht registriert werden, da die E-Mail Adresse schon registriert ist.',
+            'manage_subscription' => 'We\'ve sent you an email, please click the link to manage your subscription',
+            'subscribe'           => 'Aktualisierungen per E-Mail abonnieren.',
+            'subscribed'          => 'Sie haben E-Mail-Benachrichtigungen abonniert, überprüfen Sie bitte Ihre E-Mail, um Ihr Abonnement zu bestätigen.',
+            'updated-subscribe'   => 'You\'ve succesfully updated your subscriptions.',
+            'verified'            => 'Ihre E-Mail-Abonnement ist bestätigt worden. Danke!',
+            'manage'              => 'Verwalte deine Abonnements',
+            'unsubscribe'         => 'Abonnement widerrufen.',
+            'unsubscribed'        => 'Ihre E-Mail-Abonnement wurde beendet.',
+            'failure'             => 'Beim aktivieren des Abonnements ist ein Fehler aufgetreten.',
+            'already-subscribed'  => 'Abonnement für :email konnte nicht registriert werden, da die E-Mail Adresse schon registriert ist.',
         ],
     ],
 
@@ -123,7 +130,7 @@ return [
     'meta' => [
         'description' => [
             'incident'  => 'Details und Aktualisierung über den :name Vorfall, die am :date aufgetreten sind',
-            'schedule'  => 'Details zu den geplanten Wartungszeitraum :name Beginn ab :startDate',
+            'schedule'  => 'Details zu den geplanten Wartungszeitraum :name beginnend ab :startDate',
             'subscribe' => 'Abonniere :app um Updates von Vorfällen und geplanten Wartungszeiten zu erhalten',
             'overview'  => 'Bleiben sie auf dem Laufenden mit den neuesten Service-Updates von :app.',
         ],

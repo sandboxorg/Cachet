@@ -23,6 +23,8 @@ return [
         'group' => [
             'other' => 'crwdns883:0crwdne883:0',
         ],
+        'select_all'   => 'crwdns1510:0crwdne1510:0',
+        'deselect_all' => 'crwdns1512:0crwdne1512:0',
     ],
 
     // Incidents
@@ -32,7 +34,7 @@ return [
         'stickied'     => 'crwdns888:0crwdne888:0',
         'scheduled'    => 'crwdns1395:0crwdne1395:0',
         'scheduled_at' => 'crwdns890:0crwdne890:0',
-        'posted'       => 'crwdns891:0crwdne891:0',
+        'posted'       => 'crwdns1540:0crwdne1540:0',
         'posted_at'    => 'crwdns1396:0crwdne1396:0',
         'status'       => [
             1 => 'crwdns892:0crwdne892:0',
@@ -75,24 +77,29 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'           => 'crwdns908:0crwdne908:0',
+        'subscribe'           => 'crwdns1520:0crwdne1520:0',
         'unsubscribe'         => 'crwdns1447:0crwdne1447:0',
         'button'              => 'crwdns909:0crwdne909:0',
         'manage_subscription' => 'crwdns1448:0crwdne1448:0',
         'manage'              => [
-            'no_subscriptions' => 'crwdns910:0crwdne910:0',
-            'my_subscriptions' => 'crwdns911:0crwdne911:0',
-            'manage_at_link'   => 'crwdns1432:0crwdne1432:0',
+            'notifications'       => 'crwdns1514:0crwdne1514:0',
+            'notifications_for'   => 'crwdns1516:0crwdne1516:0',
+            'no_subscriptions'    => 'crwdns910:0crwdne910:0',
+            'update_subscription' => 'crwdns1518:0crwdne1518:0',
+            'my_subscriptions'    => 'crwdns911:0crwdne911:0',
+            'manage_at_link'      => 'crwdns1432:0crwdne1432:0',
         ],
         'email' => [
-            'subscribe'          => 'crwdns912:0crwdne912:0',
-            'subscribed'         => 'crwdns913:0crwdne913:0',
-            'verified'           => 'crwdns914:0crwdne914:0',
-            'manage'             => 'crwdns915:0crwdne915:0',
-            'unsubscribe'        => 'crwdns916:0crwdne916:0',
-            'unsubscribed'       => 'crwdns917:0crwdne917:0',
-            'failure'            => 'crwdns918:0crwdne918:0',
-            'already-subscribed' => 'crwdns919:0crwdne919:0',
+            'manage_subscription' => 'crwdns1530:0crwdne1530:0',
+            'subscribe'           => 'crwdns912:0crwdne912:0',
+            'subscribed'          => 'crwdns913:0crwdne913:0',
+            'updated-subscribe'   => 'crwdns1522:0crwdne1522:0',
+            'verified'            => 'crwdns914:0crwdne914:0',
+            'manage'              => 'crwdns915:0crwdne915:0',
+            'unsubscribe'         => 'crwdns916:0crwdne916:0',
+            'unsubscribed'        => 'crwdns917:0crwdne917:0',
+            'failure'             => 'crwdns918:0crwdne918:0',
+            'already-subscribed'  => 'crwdns919:0crwdne919:0',
         ],
     ],
 

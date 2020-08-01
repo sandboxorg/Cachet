@@ -52,7 +52,7 @@ return [
         'component_status'   => 'Status do componente',
         'message'            => 'Mensagem',
         'message-help'       => 'Você também pode usar o Markdown.',
-        'occurred_at'        => 'Quando esse incidente ocorreu?',
+        'occurred_at'        => 'Quando este incidente ocorreu?',
         'notify_subscribers' => 'Notificar os assinantes?',
         'notify_disabled'    => 'Devido a manutenção programada, notificações sobre este incidente ou seus componentes não serão feitas.',
         'visibility'         => 'Visibilidade do incidente',
@@ -73,8 +73,8 @@ return [
         'status'       => 'Status',
         'message'      => 'Mensagem',
         'message-help' => 'Você também pode usar o Markdown.',
-        'scheduled_at' => 'Está manutenção foi programada para quando?',
-        'completed_at' => 'Quando essa manutenção foi concluída?',
+        'scheduled_at' => 'Esta manutenção foi programada para quando?',
+        'completed_at' => 'Quando esta manutenção foi concluída?',
         'templates'    => [
             'name'     => 'Nome',
             'template' => 'Template',
@@ -154,12 +154,12 @@ return [
             'about-this-page'                       => 'Sobre esta página',
             'days-of-incidents'                     => 'Quantos dias de incidentes para mostrar?',
             'time_before_refresh'                   => 'Frequência de atualização da página de status (em segundos)',
-            'major_outage_rate'                     => 'Limite para indisponibilidade Maior (em %)',
+            'major_outage_rate'                     => 'Limite de indisponibilidade (em %)',
             'banner'                                => 'Imagem do banner',
             'banner-help'                           => 'Recomenda-se que você envie arquivos com até 930 pixels de largura',
             'subscribers'                           => 'Permitir que outras pessoas se cadastrem para notificações via e-mail?',
             'suppress_notifications_in_maintenance' => 'Não enviar notificações quando o incidente ocorrer durante o período de manutenção?',
-            'skip_subscriber_verification'          => 'Ignorar verificação de usuários? (Cuidado, você pode sofrer com spams)',
+            'skip_subscriber_verification'          => 'Ignorar verificação de usuários? (Cuidado, você pode sofrer com spam)',
             'automatic_localization'                => 'Localizar sua página de status de acordo com o idioma do visitante automaticamente?',
             'enable_external_dependencies'          => 'Ativar dependências de terceiros (Google Fonts, Trackers, etc...)',
             'show_timezone'                         => 'Mostrar o fuso horário no qual a página de status está sendo executada',
@@ -168,7 +168,7 @@ return [
         'analytics' => [
             'analytics_google'       => 'Código do Google Analytics',
             'analytics_gosquared'    => 'Código do GoSquared Analytics',
-            'analytics_piwik_url'    => 'URL para a instância do Piwik (sem o http(s)://)',
+            'analytics_piwik_url'    => 'URL da sua instância Piwik',
             'analytics_piwik_siteid' => 'Id do site no Piwik',
         ],
         'localization' => [
@@ -227,6 +227,11 @@ return [
 
     'general' => [
         'timezone' => 'Selecione o fuso horário',
+    ],
+
+    'seo' => [
+        'title'        => 'Título para SEO',
+        'description'  => 'Descrição para SEO',
     ],
 
     // Buttons

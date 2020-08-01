@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\View;
 /**
  * This is the component group controller class.
  *
- * @author James Brooks <james@bluebaytravel.co.uk>
+ * @author James Brooks <james@alt-three.com>
  */
 class ComponentGroupController extends Controller
 {
@@ -59,7 +59,7 @@ class ComponentGroupController extends Controller
 
         View::share([
             'sub_menu'  => $this->subMenu,
-            'sub_title' => trans_choice('dashboard.components.components', 2),
+            'subTitle'  => trans_choice('dashboard.components.components', 2),
         ]);
     }
 
@@ -87,7 +87,7 @@ class ComponentGroupController extends Controller
      */
     public function deleteComponentGroupAction(ComponentGroup $group)
     {
-        dispatch(new RemoveComponentGroupCommand($group));
+        execute(new RemoveComponentGroupCommand($group));
 
         return cachet_redirect('dashboard.components.groups')
             ->withSuccess(sprintf('%s %s', trans('dashboard.notifications.awesome'), trans('dashboard.components.delete.success')));
@@ -126,7 +126,7 @@ class ComponentGroupController extends Controller
     public function postAddComponentGroup()
     {
         try {
-            $group = dispatch(new CreateComponentGroupCommand(
+            $group = execute(new CreateComponentGroupCommand(
                 Binput::get('name'),
                 Binput::get('order', 0),
                 Binput::get('collapsed'),
@@ -153,7 +153,7 @@ class ComponentGroupController extends Controller
     public function updateComponentGroupAction(ComponentGroup $group)
     {
         try {
-            $group = dispatch(new UpdateComponentGroupCommand(
+            $group = execute(new UpdateComponentGroupCommand(
                 $group,
                 Binput::get('name'),
                 $group->order,

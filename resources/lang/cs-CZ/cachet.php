@@ -23,6 +23,8 @@ return [
         'group' => [
             'other' => 'Ostatní služby',
         ],
+        'select_all'   => 'Označit vše',
+        'deselect_all' => 'Odznačit vše',
     ],
 
     // Incidents
@@ -32,7 +34,7 @@ return [
         'stickied'     => 'Připnuté incidenty',
         'scheduled'    => 'Plánovaná odstávka',
         'scheduled_at' => ', plánované na :timestamp',
-        'posted'       => 'Publikováno :timestamp',
+        'posted'       => 'Přidáno :timestamp od :username',
         'posted_at'    => 'Publikováno :timestamp',
         'status'       => [
             1 => 'Zkoumání příčiny',
@@ -66,7 +68,7 @@ return [
     // Metrics
     'metrics' => [
         'filter' => [
-            'last_hour' => 'Před hodinou',
+            'last_hour' => 'Během poslední hodiny',
             'hourly'    => 'Posledních 12 hodin',
             'weekly'    => 'Týden',
             'monthly'   => 'Měsíc',
@@ -75,24 +77,29 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'           => 'Přihlásit se k odběru upozornění',
-        'unsubscribe'         => 'Unsubscribe',
+        'subscribe'           => 'Přihlaste se změnám stavu a aktualizacím incidentů',
+        'unsubscribe'         => 'Odhlásit odběr',
         'button'              => 'Přihlásit',
-        'manage_subscription' => 'Manage subscription',
+        'manage_subscription' => 'Spravovat odběry',
         'manage'              => [
-            'no_subscriptions' => 'Aktuálně jsi přihlášen(a) ke všem upozorněním.',
-            'my_subscriptions' => 'Aktuálně jsi přihlášen(a) k následujícím upozorněním.',
-            'manage_at_link'   => 'Spravovat odběry na :link',
+            'notifications'       => 'Oznámení',
+            'notifications_for'   => 'Spravujte oznámení pro',
+            'no_subscriptions'    => 'Aktuálně jsi přihlášen(a) ke všem upozorněním.',
+            'update_subscription' => 'Aktualizovat odběry',
+            'my_subscriptions'    => 'Aktuálně jsi přihlášen(a) k následujícím upozorněním.',
+            'manage_at_link'      => 'Spravovat odběry na :link',
         ],
         'email' => [
-            'subscribe'          => 'Přihlásit se k zasílání upozornění e-mailem.',
-            'subscribed'         => 'Proběhlo přihlášení k e-mailovým upozorněním, potvrďte ho prosím na vašem e-mailu.',
-            'verified'           => 'E-mail pro zasílání upozornění byl ověřen. Děkujeme!',
-            'manage'             => 'Spravovat odběry',
-            'unsubscribe'        => 'Odhlásit z odběru e-mailových upozornění.',
-            'unsubscribed'       => 'Odběr e-mailových upozornění byl zrušen.',
-            'failure'            => 'Došlo k chybě při nastavení odběru e-mailů.',
-            'already-subscribed' => 'Nelze přihlásit k odběru :email, protože je již přihlášen.',
+            'manage_subscription' => 'Poslali jsme Vám e-mail, prosím klikněte na odkaz pro správu odběru',
+            'subscribe'           => 'Přihlásit se k zasílání upozornění e-mailem.',
+            'subscribed'          => 'Proběhlo přihlášení k e-mailovým upozorněním, potvrďte ho prosím na vašem e-mailu.',
+            'updated-subscribe'   => 'Úspěšně jste aktualizovali své odběry.',
+            'verified'            => 'E-mail pro zasílání upozornění byl ověřen. Děkujeme!',
+            'manage'              => 'Spravovat e-mailové odběry',
+            'unsubscribe'         => 'Odhlásit z odběru e-mailových upozornění.',
+            'unsubscribed'        => 'Odběr e-mailových upozornění byl zrušen.',
+            'failure'             => 'Došlo k chybě při nastavení odběru e-mailů.',
+            'already-subscribed'  => 'Nelze přihlásit k odběru :email, protože je již přihlášen.',
         ],
     ],
 
@@ -114,7 +121,7 @@ return [
         'close'     => 'Zavřít',
         'subscribe' => [
             'title'  => 'Přihlásit se k odběru upozornění',
-            'body'   => 'Zadej svůj email pro odběr upozornění pro tuto službu. Pokud již odebíráš upozornění, budeš nadále dostávat emaily pro tuto službu.',
+            'body'   => 'Zadej svůj email pro odběr upozornění této služby. Pokud již odebíráš upozornění, budeš nadále dostávat emaily pro tuto službu.',
             'button' => 'Přihlásit',
         ],
     ],
@@ -124,7 +131,7 @@ return [
         'description' => [
             'incident'  => 'Podrobnosti a aktuální informace o událost :name, ke které došlo :date',
             'schedule'  => 'Podrobnosti o plánované údržbě :name od :startDate',
-            'subscribe' => 'Přihlaste se k odběru: app, abyste obdrželi aktualizace o událostech a plánované údržbě',
+            'subscribe' => 'Přihlaste se k odběru :app, abyste obdrželi aktualizace o událostech a plánované údržbě',
             'overview'  => 'Držte krok s nejnovějšími aktualizacemi od: app.',
         ],
     ],

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content-panel">
-    @includeWhen(isset($sub_menu), 'dashboard.partials.sub-sidebar')
+    @includeWhen(isset($subMenu), 'dashboard.partials.sub-sidebar')
     <div class="content-wrapper">
         <div class="header sub-header">
             <span class="uppercase">
@@ -23,7 +23,7 @@
                             @if($components->count() > 1)
                             <span class="drag-handle"><i class="ion ion-drag"></i></span>
                             @endif
-                            {{ $component->name }} <small>{{ $component->human_status }}</small>
+                            {!! $component->name !!} <small>{{ $component->human_status }}</small>
                         </h4>
                         @if($component->group)
                         <p><small>{{ trans('dashboard.components.listed_group', ['name' => $component->group->name]) }}</small></p>

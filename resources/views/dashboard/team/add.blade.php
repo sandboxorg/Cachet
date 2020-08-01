@@ -26,10 +26,9 @@
                     </div>
                     <div class="form-group">
                         <label>{{ trans('forms.user.password') }}</label>
-                        <input type="password" class="form-control password-strength" name="password" value="" placeholder="{{ trans('forms.user.password') }}">
-                        <div class="strengthify-wrapper"></div>
+                        <input type="password" class="form-control" name="password" value="" placeholder="{{ trans('forms.user.password') }}">
                     </div>
-                    @if($current_user->isAdmin)
+                    @if($currentUser->isAdmin)
                     <div class="form-group">
                         <label>{{ trans('forms.user.user_level') }}</label>
                         <select name="level" class="form-control">

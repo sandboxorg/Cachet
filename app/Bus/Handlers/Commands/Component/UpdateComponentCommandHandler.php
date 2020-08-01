@@ -56,6 +56,15 @@ class UpdateComponentCommandHandler
 
         $component->update($this->filter($command));
 
+        // Sync the tags into the component.
+        if ($command->tags) {
+            collect(preg_split('/ ?, ?/', $command->tags))->filter()->map(function ($tag) {
+                return trim($tag);
+            })->pipe(function ($tags) use ($component) {
+                $component->syncTags($tags);
+            });
+        }
+
         event(new ComponentWasUpdatedEvent($this->auth->user(), $component));
 
         return $component;
@@ -64,7 +73,7 @@ class UpdateComponentCommandHandler
     /**
      * Filter the command data.
      *
-     * @param \CachetHQ\Cachet\Bus\Commands\Incident\UpdateComponentCommand $command
+     * @param \CachetHQ\Cachet\Bus\Commands\Component\UpdateComponentCommand $command
      *
      * @return array
      */
